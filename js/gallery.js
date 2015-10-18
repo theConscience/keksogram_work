@@ -11,18 +11,14 @@
   var galleryElement = document.querySelector('.gallery-overlay');
   var closeButton = galleryElement.querySelector('.gallery-overlay-close');
 
-  console.log('gallery');
-
   function doesHaveParent(target, classname) {
     do {
       if (target.classList.contains(classname)) {
-        console.log('true');
         return true;
       }
-      console.log('iteration, element is ' + target);
       target = target.parentElement;
     } while (target);
-    console.log('false');
+    
     return false;
   }
 

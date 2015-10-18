@@ -190,12 +190,10 @@
 
   function isAtTheBottom() {
     var GAP = 150;
-    console.log((picturesContainer.getBoundingClientRect().bottom), window.innerHeight);
     return picturesContainer.getBoundingClientRect().bottom - GAP <= window.innerHeight;
   }
 
   function checkNextPage() {
-    console.log('hello');
     if (isAtTheBottom() && isNextPageAvailable()) {
       window.dispatchEvent(new CustomEvent('loadneeded'));
     }
