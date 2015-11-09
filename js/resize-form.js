@@ -96,6 +96,7 @@
 
   resizeForm.onsubmit = function(evt) {
     evt.preventDefault();
+
     if (displacementIsValid() && sideSizeIsValid()) {
       filterForm.elements['filter-image-src'] = previewImage.src;
       resizeForm.classList.add('invisible');
