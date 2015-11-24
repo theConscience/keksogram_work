@@ -2,3 +2,6 @@ gosha/
 node_modules/
 .idea
 .sublime*
+lib/hotels.js
+lib/gallery.js
+lib/hotel.js

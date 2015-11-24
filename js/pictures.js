@@ -11,7 +11,7 @@
   };
 
   var REQUEST_FAILURE_TIMEOUT = 10000;
-  var PAGE_SIZE = 19;
+  var PAGE_SIZE = 12;
 
   var PICTURE_RELEVANCE_TIME = 80 * 24 * 60 * 60 * 1000;
 
@@ -172,6 +172,9 @@
     var filterID = '#filter-' + filterValue;
     document.querySelector(filterID).checked = true;
     renderPictures(currentPictures, currentPage, true);
+    if (isAtTheBottom() && isNextPageAvailable()) {
+      renderPictures(currentPictures, currentPage++, false);
+    }
   }
 
   function initFilters() {
